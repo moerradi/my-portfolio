@@ -28,13 +28,13 @@ function Header() {
 					<defs>
 					<radialGradient cx="21.152%" cy="86.063%" fx="21.152%" fy="86.063%" r="79.941%" id="header-logo">
 					<stop stopColor="#8929AD" offset="0%" >
-						<animate attributeName="stop-color" values="#8929AD; #436AAC; #8929AD" dur="4s" repeatCount="indefinite"></animate>
+						<animate attributeName="stopColor" values="#8929AD; #436AAC; #8929AD" dur="4s" repeatCount="indefinite"></animate>
 					</stop>
 					<stop stopColor="#436AAC" offset="25%" >
 						<animate attributeName="stopColor" values="#436AAC; #43B7B8; #436AAC;" dur="4s" repeatCount="indefinite"></animate>
 					</stop>
 					<stop stopColor="#43B7B8" offset="100%" >
-						<animate attributeName="stop-color" values="#43B7B8;  #436AAC; #43B7B8" dur="4s" repeatCount="indefinite"></animate>
+						<animate attributeName="stopColor" values="#43B7B8;  #436AAC; #43B7B8" dur="4s" repeatCount="indefinite"></animate>
 					</stop>
 					</radialGradient>
 					</defs>

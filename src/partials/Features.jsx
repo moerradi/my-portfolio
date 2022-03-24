@@ -3,7 +3,7 @@ import Transition from '../utils/Transition';
 
 import modernStream from '../images/modernstream.png';
 import joodek from '../images/joodek.png';
-import zoomTranscribe from '../images/zoomtranscribe.png';
+import zoomTranscribe from '../images/zoomtranscribe.jpeg';
 import LinkIcon from '../utils/LinkIcon';
 
 function Features() {
@@ -35,7 +35,7 @@ function Features() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">My portfolio</h1>
+            <h1 className="h2 mb-4">My projects</h1>
             <p className="text-xl text-gray-600"></p>
           </div>
 
@@ -100,7 +100,7 @@ function Features() {
 
             {/* Tabs items */}
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" data-aos="zoom-y-out" ref={tabs}>
-              <div className="relative flex flex-col text-center lg:text-right">
+              <div className="relative flex flex-col text-center lg:text-right mt-14">
                 {/* Item 1 */}
                 <Transition
                   show={tab === 1}
@@ -114,7 +114,8 @@ function Features() {
                   leaveEnd="opacity-0 -translate-y-16"
                 >
                   <div className="relative inline-flex flex-col">
-                    <img className="md:max-w-none mx-auto rounded" src={modernStream} width="500" height="462" alt="Features bg" />
+                    <img className="mx-auto rounded max-w-full overflow-hidden" src={modernStream} width="500" height="462" alt="Modern Stream" />
+					<a className='inline-flex ml-auto mt-2 hover:text-blue-700' href="https://www.modern-stream.com/" target="_blank">visit<LinkIcon/></a>
                   </div>
                 </Transition>
                 {/* Item 2 */}
@@ -130,7 +131,8 @@ function Features() {
                   leaveEnd="opacity-0 -translate-y-16"
                 >
                   <div className="relative inline-flex flex-col">
-                    <img className="md:max-w-none mx-auto rounded" src={joodek} width="500" height="462" alt="Features bg" />
+                    <img className="mx-auto rounded max-w-full overflow-hidden" src={joodek} width="500" height="462" alt="Joodek" />
+					<a className='inline-flex ml-auto mt-2 hover:text-blue-700' href="https://www.joodek.com/" target="_blank">visit<LinkIcon/></a>
                   </div>
                 </Transition>
                 {/* Item 3 */}
@@ -146,8 +148,8 @@ function Features() {
                   leaveEnd="opacity-0 -translate-y-16"
                 >
                   <div className="relative inline-flex flex-col">
-                    <img className="md:max-w-none mx-auto rounded" src={zoomTranscribe} width="500" height="462" alt="Features bg" />
-					<a className='inline-flex left' href="">visit<LinkIcon/></a>
+                    <img className=" mx-auto rounded max-w-full overflow-hidden" src={zoomTranscribe} width="500" height="462" alt="Zoom Transcribe" />
+					<a className='inline-flex ml-auto mt-2  hover:text-blue-700' href="https://github.com/moerradi/Zoom-Transcribe-Service" target="_blank">visit<LinkIcon/></a>
                   </div>
                 </Transition>
               </div>

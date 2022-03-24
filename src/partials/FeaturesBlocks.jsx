@@ -113,8 +113,8 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Deployent Automation</h4>
-              <p className="text-gray-600 text-center">CI/CD pipelines, Container orchestration, Web automation and many more.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Deployment Automation</h4>
+              <p className="text-gray-600 text-center">CI/CD pipelines, Container orchestration, Web automation ...</p>
             </div>
 
           </div>

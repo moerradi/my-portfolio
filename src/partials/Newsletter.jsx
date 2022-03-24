@@ -1,6 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
+import axios from 'axios';
 
 function Newsletter() {
+	  const [email, setEmail] = useState('');
+	  const [showThanks, setShowThanks] = useState(false);
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		try {
+			const resp = await axios({
+				method: 'post',
+				url: "https://chat.modern-stream.com/mailing/subscribe",
+				data: {
+					email: email
+				}
+			});
+			setShowThanks(true);
+		}
+		catch(error) {
+			console.log(error);
+		}
+	}
+
+	const handleChange = (e) => {
+		setEmail(e.target.value);
+	}
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -43,13 +67,13 @@ function Newsletter() {
                 <p className="text-gray-300 text-lg mb-6">For any further questions or if you want to contact me.</p>
 
                 {/* CTA form */}
-                <form className="w-full lg:w-auto">
+                <form className="w-full lg:w-auto" onSubmit={handleSubmit}>
                   <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
-                    <input type="email" className="form-input w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500" placeholder="Your email…" aria-label="Your email…" />
-                    <a className="btn text-white bg-blue-600 hover:bg-blue-700 shadow" href="#0">Send</a>
+                    <input type="email" className="form-input w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500" placeholder="Your email…" aria-label="Your email…" onChange={handleChange}/>
+                    <button type='submit' className="btn text-white bg-blue-600 hover:bg-blue-700 shadow" >Send</button>
                   </div>
                   {/* Success message */}
-                  {/* <p className="text-sm text-gray-400 mt-3">Thanks for subscribing!</p> */}
+                  {showThanks && <p className="text-sm text-gray-400 mt-3" >Thanks for subscribing!</p>}
                   {/* <p className="text-sm text-gray-400 mt-3">7 days free trial. No credit card required.</p> */}
                 </form>
               </div>
